@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.HomeActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="18dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/include2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/content_scrolling"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:id="@+id/include2"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginLeft="64dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/volcanicHelp"
+        android:layout_width="79dp"
+        android:layout_height="63dp"
+        android:layout_marginLeft="-6dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/ic_round_button"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        android:text="Volcano"
+        android:textSize="8sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stromHelp"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <!-- <android.support.design.widget.FloatingActionButton
+         android:id="@+id/helpType"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="What should I do in emergency?"
+         android:textColorLink="@android:color/holo_red_dark"
+         android:textSize="20sp"
+         tools:layout_constraintTop_creator="1"
+         tools:layout_constraintLeft_creator="1"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />-->
+
+    <Button
+        android:id="@+id/earthquakeHelp"
+        android:layout_width="76dp"
+        android:layout_height="66dp"
+        android:layout_marginLeft="-4dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/ic_round_button"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        android:text="Earthquake"
+        android:textSize="8sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/tsunamiHelp"
+        android:layout_width="76dp"
+        android:layout_height="59dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/ic_round_button"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        android:text="Tsunami"
+        android:textSize="8sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/earthquakeHelp"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/stromHelp"
+        android:layout_width="77dp"
+        android:layout_height="63dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_round_button"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        android:text="Storm"
+        android:textSize="8sp"
+        app:layout_constraintLeft_toLeftOf="@+id/fireHelp"
+        app:layout_constraintTop_toBottomOf="@+id/fireHelp"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/fireHelp"
+        android:layout_width="75dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/ic_round_button"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        android:text="Fire"
+        android:textSize="8sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tsunamiHelp"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+</android.support.constraint.ConstraintLayout>
