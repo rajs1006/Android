@@ -32,6 +32,7 @@ public class DisasterActivity extends AppCompatActivity {
 
 
     DisasterHelper myDB;
+    
     HintSpinner<String> defaultHintSpinner;
     Spinner spinner;
     EditText disDetailsBox, countryBox, regionBox, disEmergencyBox;
